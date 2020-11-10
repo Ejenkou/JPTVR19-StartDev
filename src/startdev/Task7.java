@@ -5,21 +5,38 @@
  */
 package startdev;
 
+import java.util.Scanner;
+
 /**
  *
  * @author user
  */
-public class Task7 {
+class Task7 {
     public void run(){
-        System.out.println("----- Задача 7 ------");
+        System.out.println("Task 7");
         System.out.println("Введите строку");
+        Scanner scanner = new Scanner(System.in);
+        String str = scanner.nextLine();
         // посчитайте сколько раз в строке встречается введенная вами буква
         System.out.println("Введите букву: ");
-        String letter = ?;
-        int n = 0;
         
-        System.out.println("Буква \""+letter+"\" встречается в тексте "+ n + "раз");
+        String text = scanner.nextLine();
+        int n = 0;
+        int index = -1;
+        while(true){
+            index = str.indexOf(text , index+1);
+            if (index != -1) {
+                n++;
+                continue;
+            }
+            break;
+        }
+        System.out.println("Буква \""+text+"\" встречается в тексте "+ n + " раз");
         System.out.println("");
-        System.out.println("----- конец задачи 6 ------");
+        System.out.println("----- конец задачи 7 ------");
+        }
+        
+        
     }
-}
+
+
